@@ -1,4 +1,5 @@
 \documentclass[10pt]{beamer}
+%put handout in option above to disable the animation itemize/pause
 
 \usepackage{xeCJK}
 \setCJKmainfont{IPAMincho}
@@ -19,6 +20,7 @@
 \definecolor{ehimeColor}{RGB}{248, 181, 0} %yellowis
 \definecolor{ehimeColor2}{RGB}{55, 46, 42}
 \definecolor{ehimeColor3}{RGB}{200, 184, 20}
+
 \setbeamercolor{block title}{bg=ehimeColor,fg=black}
 \setbeamercolor{block body}{bg=ehimeColor!20,fg=black}
 \setbeamercolor{block title alerted}{bg=black, fg=ehimeColor}
@@ -26,7 +28,7 @@
 
 \setbeamercolor*{block title example}{bg=ehimeColor, fg = black}
 \setbeamercolor*{block body example}{bg=ehimeColor!20, fg = black}
-\usebeamercolor[ehimeColor]{block title alerted}
+%\usebeamercolor[ehimeColor]{block title alerted}
 \setbeamercolor*{palette primary}{bg=ehimeColor}
 \setbeamercolor*{palette secondary}{bg=ehimeColor, fg = white}
 \setbeamercolor*{palette tertiary}{bg=ehimeColor, fg = white}
@@ -60,23 +62,23 @@ Nov 2, 2022}
 %------------------------------------------------------------
 %This block of commands puts the table of contents at the 
 %beginning of each section and highlights the current section:
-\AtBeginSection[]
-{
-  \begin{frame}
-    \frametitle{Contents}
-    \tableofcontents[currentsection]
-  \end{frame}
-}
-%\AtBeginSection[]{
+%\AtBeginSection[]
+%{
 %  \begin{frame}
-%  \vfill
-%  \centering
-%  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-%    \usebeamerfont{title}\insertsectionhead\par%
-%  \end{beamercolorbox}
-%  \vfill
+%    \frametitle{Contents}
+%    \tableofcontents[currentsection]
 %  \end{frame}
 %}
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
 %------------------------------------------------------------
 \begin{document}
 %The next statement creates the title page.
